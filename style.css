@@ -1,0 +1,168 @@
+@font-face {
+  font-family: "Open Sans";
+  /* IE9 Compat Modes */
+  src: url(assets/OpenSans-Regular.eot);
+  src: url(assets/OpenSans-Regular.eot?#iefix) format("embedded-opentype"), url(assets/OpenSans-Regular.woff) format("woff"), url(assets/OpenSans-Regular.ttf) format("truetype"), url(assets/OpenSans-Regular.svg) format("svg");
+  /* Legacy iOS */ }
+
+/*Colors*/
+* {
+  font-family: "Open Sans"; }
+
+.files_table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid lightgrey;
+  margin: auto; }
+
+.files_table__body__row_cell {
+  border: 1px solid lightgrey;
+  padding: 10px; }
+  .files_table__body__row_cell.group {
+    cursor: pointer;
+    transition: all .2s ease; }
+    .files_table__body__row_cell.group.active {
+      -webkit-box-shadow: inset 0px 0px 5px 3px #509FFF;
+      -moz-box-shadow: inset 0px 0px 5px 3px #509FFF;
+      box-shadow: inset 0px 0px 5px 3px #509FFF;
+      border: none; }
+      .files_table__body__row_cell.group.active .clients_group {
+        display: block; }
+      .files_table__body__row_cell.group.active:hover {
+        color: initial; }
+    .files_table__body__row_cell.group .clients_group {
+      display: none;
+      padding: 10px;
+      color: initial;
+      position: absolute;
+      background: white;
+      border: 1px solid lightgrey;
+      left: 1277px;
+      top: 45px;
+      list-style: none; }
+    .files_table__body__row_cell.group:hover {
+      color: #509FFF; }
+
+.files_table__headers__header {
+  border: 1px solid lightgrey;
+  padding: 15px;
+  position: relative;
+  text-transform: capitalize; }
+  .files_table__headers__header.clients:hover:before {
+    display: none; }
+  .files_table__headers__header.ascending:before, .files_table__headers__header.descending:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 4px;
+    margin: auto; }
+  .files_table__headers__header:hover:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 4px;
+    margin: auto;
+    border-width: 5px 4px 0 4px;
+    border-color: lightgrey transparent transparent transparent; }
+  .files_table__headers__header.ascending:before {
+    border-width: 5px 4px 0 4px;
+    border-color: #000000 transparent transparent transparent; }
+  .files_table__headers__header.descending:before {
+    border-width: 0 4px 5px 4px;
+    border-color: transparent transparent #000000 transparent; }
+
+.filter_clientsFilter {
+  position: absolute;
+  top: -2px;
+  right: 11px; }
+  .filter_clientsFilter.active .popup_wrapper {
+    display: block; }
+
+.filter_options__header_title {
+  margin: 0; }
+
+.filter_options__footer_note {
+  margin: 0;
+  margin-bottom: 5px;
+  font-weight: 400;
+  font-size: small;
+  text-transform: initial; }
+
+.filter_options__footer__button {
+  background-color: transparent;
+  width: 70px;
+  border: none;
+  height: 25px;
+  border-radius: 12px;
+  color: white;
+  transition: background-color .2s ease;
+  cursor: pointer; }
+  .filter_options__footer__button:focus {
+    outline: none; }
+  .filter_options__footer__button.reset {
+    margin-right: 10px;
+    background-color: lightcoral; }
+    .filter_options__footer__button.reset:hover {
+      background-color: #EB6565; }
+  .filter_options__footer__button.filter {
+    background-color: #509FFF; }
+    .filter_options__footer__button.filter:hover {
+      background-color: #458FE8; }
+
+.filter_options {
+  background-color: white;
+  position: relative;
+  top: 22px;
+  z-index: 9;
+  padding: 10px;
+  right: -12px;
+  border: 1px solid lightgrey;
+  -webkit-box-shadow: -2px 3px 3px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -2px 3px 3px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: -2px 3px 3px 0px rgba(0, 0, 0, 0.75); }
+
+.filter_options__list {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0;
+  max-height: 123px;
+  overflow-y: auto;
+  min-width: 250px;
+  border-bottom: 1px solid lightgrey;
+  border-top: 1px solid lightgrey; }
+
+.filter_options__list_item {
+  text-align: left;
+  font-weight: 400;
+  float: left;
+  min-width: 50%; }
+
+.filter_button {
+  background-color: white;
+  color: lightgrey;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: -11px;
+  top: 2px;
+  transition: color .2s ease; }
+  .filter_button.active {
+    color: #509FFF;
+    border-left: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey; }
+    .filter_button.active:hover {
+      color: #458FE8; }
+  .filter_button:hover {
+    color: initial;
+    border-left: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey; }
+  .filter_button:focus {
+    outline: none; }
